@@ -128,7 +128,7 @@ buttonEl.addEventListener("click", taskFormHandler); {
     if (event.target.matches(".delete-btn")) {
       var taskId = event.target.getAttribute("data-task-id");
       deleteTask(taskId);
-    }
+    
 
 
     var editTask = function(taskId) {
@@ -148,13 +148,22 @@ buttonEl.addEventListener("click", taskFormHandler); {
           var taskId = targetEl.getAttribute("data-task-id");
           deleteTask(taskId);
         }
-    }
+      }
+    
     
   
     // get task list item element
     var taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
+    console.log("editing task #" + taskId);
+  
 
-    
+    // get content from task name and type
+    //var taskName = taskSelected.querySelector("h3.task-name").textContent;
+    //console.log(taskName);
+
+    //var taskType = taskSelected.querySelector("span.task-type").textContent;
+    //console.log(taskType);
+    }
 
   }
   //listItemEl.className = "task-item";
